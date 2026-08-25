@@ -1,0 +1,19 @@
+{
+  "name": "com.arplanet.module5.player.arfoundation",
+  "version": "1.0.0",
+  "displayName": "Module5 Player For ARFoundation",
+  "description": "Runtime Player ARFoundation Sample",
+  "unity": "6000.0",
+  "author": {
+    "name": "Arplanet",
+    "email": ""
+  },
+  "dependencies": {
+    "com.arplanet.module5.player": "1.0.0",
+    "com.unity.xr.arfoundation": "6.1.1",
+    "com.unity.xr.core-utils": "2.5.3",
+    "com.unity.inputsystem": "1.14.2",
+    "com.unity.render-pipelines.universal": "17.0.4",
+    "com.unity.nuget.newtonsoft-json": "3.2.2"
+  }
+}
