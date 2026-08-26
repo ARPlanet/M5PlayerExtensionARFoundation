@@ -215,10 +215,8 @@ MonoBehaviour:
   _generatedNoise: {fileID: 0}
   _worldGatherMat: {fileID: 2100000, guid: ccdf0da80c6363d42a57fa595880adae, type: 2}
   _standardGatherMat: {fileID: 2100000, guid: a414937e9e8dde74e82f37d0a96a6ee1, type: 2}
-  _gltfPbrMetGatherMat: {fileID: 2100000, guid: c2af166d09808ce41802180a904f9005,
-    type: 2}
-  _gltfPbrSpecGatherMat: {fileID: 2100000, guid: 53def2d4b5cdb3f4ca7b735d35c74aec,
-    type: 2}
+  _gltfPbrMetGatherMat: {fileID: 2100000, guid: c2af166d09808ce41802180a904f9005, type: 2}
+  _gltfPbrSpecGatherMat: {fileID: 2100000, guid: 53def2d4b5cdb3f4ca7b735d35c74aec, type: 2}
   _gltfUnlitGatherMat: {fileID: 2100000, guid: e0393ff6ccfdad848b1da63cc81a9ed9, type: 2}
   _uiTextGatherMat: {fileID: 2100000, guid: fe03961e2c314884987f5db20afe19de, type: 2}
   _uiImageGatherMat: {fileID: 2100000, guid: b7642e6150b2b09469b94e552acdb0d3, type: 2}
@@ -248,62 +246,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10386322a4334094392d94880ff22915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentReference:
-    TypeName: 
   autoRun: 1
   autoInjectGameObjects:
   - {fileID: 2036748}
   - {fileID: 381481368}
   - {fileID: 6946363076659415204}
   createObjectManagerData:
-    sceneRootPrefab: {fileID: 3445310788717336769, guid: 8c25b9fe78c77f8449e0c47fdd9754f2,
-      type: 3}
+    sceneRootPrefab: {fileID: 3445310788717336769, guid: 8c25b9fe78c77f8449e0c47fdd9754f2, type: 3}
     prefabs:
     - type: Empty
-      prefab: {fileID: 3532261362109126120, guid: 0ad6708f73b703e4692450f4ba2ae0d6,
-        type: 3}
+      prefab: {fileID: 3532261362109126120, guid: 0ad6708f73b703e4692450f4ba2ae0d6, type: 3}
     - type: Event
-      prefab: {fileID: 3532261362109126120, guid: 7faaf454c370b584ab749d3df51015ec,
-        type: 3}
+      prefab: {fileID: 3532261362109126120, guid: 7faaf454c370b584ab749d3df51015ec, type: 3}
     - type: BoxCollider
-      prefab: {fileID: 6208844311376820055, guid: ca600a422dc4764419e5d4474a7fc00f,
-        type: 3}
+      prefab: {fileID: 6208844311376820055, guid: ca600a422dc4764419e5d4474a7fc00f, type: 3}
     - type: Light
-      prefab: {fileID: 461730334381320088, guid: 181b08f70c6529c45a3ffc68501bb76b,
-        type: 3}
+      prefab: {fileID: 461730334381320088, guid: 181b08f70c6529c45a3ffc68501bb76b, type: 3}
     - type: AudioSource
-      prefab: {fileID: 960150205593053138, guid: a49f017121a848740b62629507feb7a0,
-        type: 3}
+      prefab: {fileID: 960150205593053138, guid: a49f017121a848740b62629507feb7a0, type: 3}
     - type: ModelRender
-      prefab: {fileID: 3532261362109126120, guid: ae670389cb50db445a4badafa558a47a,
-        type: 3}
+      prefab: {fileID: 3532261362109126120, guid: ae670389cb50db445a4badafa558a47a, type: 3}
     - type: Panel
-      prefab: {fileID: 3532261362109126120, guid: d58af93d78677f8488c26d46b538ceab,
-        type: 3}
+      prefab: {fileID: 3532261362109126120, guid: d58af93d78677f8488c26d46b538ceab, type: 3}
     - type: Canvas
-      prefab: {fileID: 8095233212808263114, guid: de308b9c899bb914ca4228535516a9a2,
-        type: 3}
+      prefab: {fileID: 8095233212808263114, guid: de308b9c899bb914ca4228535516a9a2, type: 3}
     - type: RawImage
-      prefab: {fileID: 8462400952816978209, guid: b66b5dc59fcb2904888e49b72fa06465,
-        type: 3}
+      prefab: {fileID: 8462400952816978209, guid: b66b5dc59fcb2904888e49b72fa06465, type: 3}
     - type: Button
-      prefab: {fileID: 8462400952816978209, guid: e6586e90397642c41b3fb9fbcb2d043e,
-        type: 3}
+      prefab: {fileID: 8462400952816978209, guid: e6586e90397642c41b3fb9fbcb2d043e, type: 3}
     - type: InputField
-      prefab: {fileID: 2619261951748714948, guid: e21613b1753d91e4c9c42cd150d5639a,
-        type: 3}
+      prefab: {fileID: 2619261951748714948, guid: e21613b1753d91e4c9c42cd150d5639a, type: 3}
     - type: Text
-      prefab: {fileID: 8462400952816978209, guid: 50da33c0a737759408c70e1bb99ce35c,
-        type: 3}
+      prefab: {fileID: 8462400952816978209, guid: 50da33c0a737759408c70e1bb99ce35c, type: 3}
     - type: VideoPlayer2D
-      prefab: {fileID: 639104483333288386, guid: ca93574a868255a4ea3965d77bf5ed63,
-        type: 3}
+      prefab: {fileID: 639104483333288386, guid: ca93574a868255a4ea3965d77bf5ed63, type: 3}
     - type: VideoPlayer360
-      prefab: {fileID: 7753200158965688310, guid: 63d39c61599759d478b9dcebc91809f7,
-        type: 3}
+      prefab: {fileID: 7753200158965688310, guid: 63d39c61599759d478b9dcebc91809f7, type: 3}
     - type: VR360
-      prefab: {fileID: 7753200158965688310, guid: 3144372332acf3149b5cdc68d6c1d3c2,
-        type: 3}
+      prefab: {fileID: 7753200158965688310, guid: 3144372332acf3149b5cdc68d6c1d3c2, type: 3}
   sceneManagerData:
     virtualCamera: {fileID: 459082846}
     root: {fileID: 713886727}
@@ -347,28 +327,17 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
@@ -718,7 +687,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225538194}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &225538197
 Camera:
   m_ObjectHideFlags: 0
@@ -1842,7 +1811,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885697448}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1885697455
 Camera:
   m_ObjectHideFlags: 0
@@ -5682,8 +5651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   content: {fileID: 4469206965249699190}
   listScrollRect: {fileID: 2666883259685906188}
-  logItemPrefab: {fileID: 2272640892155987408, guid: 021fe9cebe6e3b940a55ff93b0e39391,
-    type: 3}
+  logItemPrefab: {fileID: 2272640892155987408, guid: 021fe9cebe6e3b940a55ff93b0e39391, type: 3}
   detailScrollRect: {fileID: 2995423238427021071}
   detailText: {fileID: 4481794418602010002}
   clearButton: {fileID: 2094333050549196744}
