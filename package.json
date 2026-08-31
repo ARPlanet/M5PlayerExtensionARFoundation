@@ -1,6 +1,6 @@
 {
   "name": "com.arplanet.module5.player.arfoundation",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "displayName": "Module5 Player For ARFoundation",
   "description": "Runtime Player ARFoundation Sample",
   "unity": "6000.0",
@@ -9,7 +9,7 @@
     "email": ""
   },
   "dependencies": {
-    "com.arplanet.module5.player": "1.0.3",
+    "com.arplanet.module5.player": "1.0.4",
     "com.unity.xr.arfoundation": "6.1.1",
     "com.unity.xr.core-utils": "2.5.3",
     "com.unity.inputsystem": "1.14.2",
