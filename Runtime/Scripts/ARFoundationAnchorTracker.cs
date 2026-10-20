@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -21,6 +21,8 @@ namespace Module5.Player.ARFoundation
         public ARSession arSession;
         public XROrigin xrOrigin;
         public ARTrackedImageManager imageManager;
+        [Tooltip("場景座標校正過渡時間（秒），數值越小校正越快。設為 0 則瞬間校正。")]
+        public float transitionDuration = 1.0f;
     }
 
     public class ARFoundationAnchorTracker : ARAnchorTracker, ITickable
@@ -41,7 +43,7 @@ namespace Module5.Player.ARFoundation
         private List<Texture2D> _activeSanitizedTextures = new List<Texture2D>();
 
         // Smoothing fields
-        private float _transitionDuration = 1.0f;
+        private float _transitionDuration => _data != null ? _data.transitionDuration : 1.0f;
         private float _transitionTimer = 0f;
         private bool _hasInitialPose = false;
         private bool _isTransitioning = false;
@@ -98,6 +100,14 @@ namespace Module5.Player.ARFoundation
         {
 #if (UNITY_ANDROID || UNITY_IOS)
             if (!_isTransitioning || _sceneManager.Root == null) return;
+
+            if (_transitionDuration <= 0f)
+            {
+                _sceneManager.Root.position = _targetRootPos;
+                _sceneManager.Root.rotation = _targetRootRot;
+                _isTransitioning = false;
+                return;
+            }
 
             _transitionTimer += Time.deltaTime;
             float t = Mathf.Clamp01(_transitionTimer / _transitionDuration);
@@ -207,14 +217,14 @@ namespace Module5.Player.ARFoundation
                     sync.virtualCamera = virtualCam;
 
                     // Manual sync immediately since OnEnable might have skipped it due to null fields
-                    virtualCam.ResetProjectionMatrix();
-                    virtualCam.projectionMatrix = arCam.projectionMatrix;
+                    sync.SyncFromARCamera();
                 }
                 else
                 {
                     Debug.Log($"[ARAnchorTracker] Virtual Camera sync is manually configured. Skipping auto-hierarchy setup.");
                     if (sync.arCamera == null) sync.arCamera = arCam;
                     if (sync.virtualCamera == null) sync.virtualCamera = virtualCam;
+                    sync.SyncFromARCamera();
                     
                     // Parent Virtual Camera to AR Camera for perfect pose sync
                     //virtualCam.transform.SetParent(arCam.transform);
@@ -533,13 +543,14 @@ namespace Module5.Player.ARFoundation
                 // P_root = P_tracked - R_root * P_anchor
                 Vector3 rootPos = correctedTrackedPos - (rootRot * anchorPos);
 
-                if (!_hasInitialPose)
+                if (!_hasInitialPose || _transitionDuration <= 0f)
                 {
-                    // Snap the first detection
+                    // Snap the first detection or if transitionDuration <= 0
                     _sceneManager.Root.position = rootPos;
                     _sceneManager.Root.rotation = rootRot;
                     _hasInitialPose = true;
-                    Debug.Log($"[ARAnchorTracker] Initial Scene Root snapped to {imageName}. Pos: {rootPos}");
+                    _isTransitioning = false;
+                    Debug.Log($"[ARAnchorTracker] Scene Root snapped to {imageName}. Pos: {rootPos}");
                 }
                 else
                 {
