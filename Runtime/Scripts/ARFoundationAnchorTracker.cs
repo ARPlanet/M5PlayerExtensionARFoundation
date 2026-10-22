@@ -198,7 +198,7 @@ namespace Module5.Player.ARFoundation
                     }
                 }
 
-                SyncVirtualCamera sync = virtualCam.gameObject.GetComponent<SyncVirtualCamera>();
+                SyncVirtualARCamera sync = virtualCam.gameObject.GetComponent<SyncVirtualARCamera>();
                 if (sync == null)
                 {
                     // Ensure Virtual Camera clears to depth only to see AR background
@@ -212,7 +212,13 @@ namespace Module5.Player.ARFoundation
                     //virtualCam.transform.localPosition = Vector3.zero;
                     //virtualCam.transform.localRotation = Quaternion.identity;
 
-                    sync = virtualCam.gameObject.AddComponent<SyncVirtualCamera>();
+                    SyncVirtualCamera baseSync = virtualCam.gameObject.GetComponent<SyncVirtualCamera>();
+                    if (baseSync != null && baseSync.GetType() == typeof(SyncVirtualCamera))
+                    {
+                        UnityEngine.Object.Destroy(baseSync);
+                    }
+
+                    sync = virtualCam.gameObject.AddComponent<SyncVirtualARCamera>();
                     sync.arCamera = arCam;
                     sync.virtualCamera = virtualCam;
 
@@ -246,12 +252,6 @@ namespace Module5.Player.ARFoundation
             {
                 // Ensure we can track moving images (or at least more than 0)
                 _data.imageManager.requestedMaxNumberOfMovingImages = 4;
-            }
-
-            // Ensure near clipping plane is small enough for close-up AR interaction
-            if (_data.xrOrigin != null && _data.xrOrigin.Camera != null)
-            {
-                _data.xrOrigin.Camera.nearClipPlane = 0.01f;
             }
 
             // Reset smoothing state on re-init

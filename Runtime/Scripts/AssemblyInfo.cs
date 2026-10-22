@@ -1,4 +1,4 @@
 using UnityEngine.Scripting;
 
 [assembly: Preserve]
-[assembly: System.Reflection.AssemblyInformationalVersion("1.0.5")]
+[assembly: System.Reflection.AssemblyInformationalVersion("1.0.6")]
